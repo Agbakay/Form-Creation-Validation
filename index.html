@@ -7,15 +7,50 @@
     <title>Document</title>
   </head>
   <body>
-    <form id="registration-form">
-      <label for="username">Username:</label>
-      <input type="text" id="username" required />
+    <form id="registration-form" novalidate>
+      <div>
+        <label for="username">Username:</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          required
+          aria-describedby="username-error"
+        />
+        <span
+          id="username-error"
+          class="error-message"
+          aria-live="polite"
+        ></span>
+      </div>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" required />
+      <div>
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          aria-describedby="email-error"
+        />
+        <span id="email-error" class="error-message" aria-live="polite"></span>
+      </div>
 
-      <label for="password">Password:</label>
-      <input type="password" id="password" required />
+      <div>
+        <label for="password">Password:</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required
+          aria-describedby="password-error"
+        />
+        <span
+          id="password-error"
+          class="error-message"
+          aria-live="polite"
+        ></span>
+      </div>
 
       <button type="submit">Register</button>
       <div id="form-feedback"></div>
